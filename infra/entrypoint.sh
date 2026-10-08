@@ -14,6 +14,9 @@
 #   5. Exec the requested process (odoo server, shell, or tenant tooling).
 # ---------------------------------------------------------------------------
 set -euo pipefail
+trap 'rc=$?; echo "[entrypoint] FATAL: command \"$BASH_COMMAND\" failed at line $LINENO (exit $rc)" >&2' ERR
+
+echo "[entrypoint] starting (pid $$, user $(id -un 2>/dev/null || echo unknown))"
 
 CONF_FILE="/etc/odoo/odoo.conf"
 HTTP_PORT="${PORT:-8069}"
