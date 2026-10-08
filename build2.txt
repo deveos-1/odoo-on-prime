@@ -1,0 +1,100 @@
+2026-10-08T21:16:57.735869183Z | ==> It looks like we don't have access to your repo, but we'll try to clone it anyway.
+2026-10-08T21:16:57.735880076Z | ==> Cloning from https://github.com/deveos-1/odoo-on-prime
+2026-10-08T21:17:17.368760218Z | ==> Checking out commit 8973c196b509c3b622e652cdbb1415008c79fb6b in branch main
+2026-10-08T21:17:19.847511665Z | #1 [internal] load build definition from Dockerfile
+2026-10-08T21:17:19.847529252Z | #1 transferring dockerfile: 2.06kB done
+2026-10-08T21:17:19.847531014Z | #1 DONE 0.0s
+2026-10-08T21:17:19.847532282Z | 
+2026-10-08T21:17:19.84753465Z | #2 resolve image config for docker-image://docker.io/docker/dockerfile:1
+2026-10-08T21:17:20.859957161Z | #2 ...
+2026-10-08T21:17:20.859970841Z | 
+2026-10-08T21:17:20.859973215Z | #3 [auth] docker/dockerfile:pull render-prod/docker-mirror-repository/docker/dockerfile:pull token for us-west1-docker.pkg.dev
+2026-10-08T21:17:20.85998199Z | #3 DONE 0.0s
+2026-10-08T21:17:21.01017096Z | 
+2026-10-08T21:17:21.010184535Z | #2 resolve image config for docker-image://docker.io/docker/dockerfile:1
+2026-10-08T21:17:23.572511439Z | #2 DONE 3.9s
+2026-10-08T21:17:23.728827213Z | 
+2026-10-08T21:17:23.728837385Z | #4 docker-image://docker.io/docker/dockerfile:1@sha256:4edf897a3ffa55b89f906fc8cc78afdb3f1834cc9c7083565e611a8a7d5fe99e
+2026-10-08T21:17:23.728839018Z | #4 resolve docker.io/docker/dockerfile:1@sha256:4edf897a3ffa55b89f906fc8cc78afdb3f1834cc9c7083565e611a8a7d5fe99e done
+2026-10-08T21:17:26.304054905Z | #4 extracting sha256:9d2b4f57f9e20f33279375ce25c6ff14f30f64270ed5c7b613b2b30256754f62 0.1s done
+2026-10-08T21:17:26.304069777Z | #4 DONE 2.7s
+2026-10-08T21:17:26.549510119Z | 
+2026-10-08T21:17:26.54953436Z | #5 [internal] load metadata for docker.io/library/python:3.12-slim-bookworm
+2026-10-08T21:17:27.579987133Z | #5 ...
+2026-10-08T21:17:27.579998829Z | 
+2026-10-08T21:17:27.580002397Z | #6 [auth] library/python:pull render-prod/docker-mirror-repository/library/python:pull token for us-west1-docker.pkg.dev
+2026-10-08T21:17:27.580004018Z | #6 DONE 0.0s
+2026-10-08T21:17:27.730263842Z | 
+2026-10-08T21:17:27.730285623Z | #5 [internal] load metadata for docker.io/library/python:3.12-slim-bookworm
+2026-10-08T21:17:30.102959538Z | #5 DONE 3.7s
+2026-10-08T21:17:30.221985656Z | 
+2026-10-08T21:17:30.222012228Z | #7 [internal] load .dockerignore
+2026-10-08T21:17:30.222014142Z | #7 transferring context: 2B done
+2026-10-08T21:17:30.222016388Z | #7 DONE 0.0s
+2026-10-08T21:17:30.222017824Z | 
+2026-10-08T21:17:30.22201929Z | #8 [internal] load build context
+2026-10-08T21:17:30.222020775Z | #8 DONE 0.0s
+2026-10-08T21:17:30.222021995Z | 
+2026-10-08T21:17:30.222023921Z | #9 [1/8] FROM docker.io/library/python:3.12-slim-bookworm@sha256:34386ef0cb081344d7ec1c103ba398e6e9f64e9ab3a1509accc92a4e24a07258
+2026-10-08T21:17:30.222025403Z | #9 resolve docker.io/library/python:3.12-slim-bookworm@sha256:34386ef0cb081344d7ec1c103ba398e6e9f64e9ab3a1509accc92a4e24a07258 done
+2026-10-08T21:17:30.222027404Z | #9 DONE 0.0s
+2026-10-08T21:17:30.222028642Z | 
+2026-10-08T21:17:30.222029929Z | #10 importing cache manifest
+2026-10-08T21:17:30.222031975Z | #10 inferred cache manifest type: application/vnd.oci.image.manifest.v1+json done
+2026-10-08T21:17:30.222033348Z | #10 DONE 0.1s
+2026-10-08T21:17:30.327064957Z | 
+2026-10-08T21:17:30.327080096Z | #8 [internal] load build context
+2026-10-08T21:17:35.129813856Z | #8 transferring context: 717.23MB 4.9s
+2026-10-08T21:17:36.890005466Z | #8 transferring context: 984.13MB 6.5s done
+2026-10-08T21:17:36.890017656Z | #8 DONE 6.7s
+2026-10-08T21:17:37.014602472Z | 
+2026-10-08T21:17:37.014619813Z | #11 [5/8] COPY requirements.txt ./requirements.txt
+2026-10-08T21:17:37.014622397Z | #11 CACHED
+2026-10-08T21:17:37.014623657Z | 
+2026-10-08T21:17:37.014627755Z | #12 [2/8] RUN apt-get update && apt-get install -y --no-install-recommends         build-essential         curl         fonts-noto-cjk         gnupg         libffi-dev         libjpeg-dev         libldap2-dev         libpq-dev         libsasl2-dev         libxml2-dev         libxslt1-dev         libxslt1.1         node-less         python3-dev         xfonts-75dpi         xfonts-base         zlib1g-dev     && curl -sSL https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6.1-3/wkhtmltox_0.12.6.1-3.bookworm_amd64.deb         -o /tmp/wkhtmltox.deb     && apt-get install -y --no-install-recommends /tmp/wkhtmltox.deb     && rm -rf /tmp/wkhtmltox.deb     && rm -rf /var/lib/apt/lists/*
+2026-10-08T21:17:37.014644166Z | #12 CACHED
+2026-10-08T21:17:37.014645479Z | 
+2026-10-08T21:17:37.014656036Z | #13 [3/8] RUN useradd -ms /bin/bash odoo     && mkdir -p /var/lib/odoo /etc/odoo /mnt/extra-addons     && chown -R odoo:odoo /var/lib/odoo /etc/odoo /mnt/extra-addons
+2026-10-08T21:17:37.014657421Z | #13 CACHED
+2026-10-08T21:17:37.014658853Z | 
+2026-10-08T21:17:37.014660567Z | #14 [4/8] WORKDIR /opt/odoo
+2026-10-08T21:17:37.014662501Z | #14 CACHED
+2026-10-08T21:17:37.014663686Z | 
+2026-10-08T21:17:37.014665286Z | #15 [6/8] RUN pip install --no-cache-dir -r requirements.txt     && pip install --no-cache-dir psycopg2-binary
+2026-10-08T21:17:37.675340718Z | #15 extracting sha256:7fd1ebe418b5079d4aa36f416af9b143d127bc75b0155d71cb5fd559b5e04d39
+2026-10-08T21:17:38.275807609Z | #15 extracting sha256:7fd1ebe418b5079d4aa36f416af9b143d127bc75b0155d71cb5fd559b5e04d39 0.6s done
+2026-10-08T21:17:38.275820963Z | #15 extracting sha256:6e0ba8ba048777f5354b5a7cb497ae5261116fac8246160c06fc045c8300c582
+2026-10-08T21:17:38.724138475Z | #15 extracting sha256:6e0ba8ba048777f5354b5a7cb497ae5261116fac8246160c06fc045c8300c582 0.6s done
+2026-10-08T21:17:38.875324924Z | #15 extracting sha256:86a9e13e035d8e44ae37bfebc52c7fc68898fde19b4b26dd0585f2231fcfaf2c
+2026-10-08T21:17:39.129922377Z | #15 extracting sha256:86a9e13e035d8e44ae37bfebc52c7fc68898fde19b4b26dd0585f2231fcfaf2c 0.4s done
+2026-10-08T21:17:39.325973118Z | #15 extracting sha256:f9d2fb07d6f062d06ddc7aa58191cc5359c728f54af6cebe69a37d2c89e72a0d done
+2026-10-08T21:17:40.3605918Z | #15 extracting sha256:0de57d95c157eb14c77ec82914cf02bde4385b7dda2cf705bdf35ee404d27853
+2026-10-08T21:17:42.224811584Z | #15 extracting sha256:0de57d95c157eb14c77ec82914cf02bde4385b7dda2cf705bdf35ee404d27853 2.0s done
+2026-10-08T21:17:42.224828583Z | #15 DONE 5.2s
+2026-10-08T21:17:42.386821349Z | 
+2026-10-08T21:17:42.38683385Z | #15 [6/8] RUN pip install --no-cache-dir -r requirements.txt     && pip install --no-cache-dir psycopg2-binary
+2026-10-08T21:17:42.386836785Z | #15 extracting sha256:3a357ac8f1e0deefb13e35298088d205d190be79dd5f6c564d4f2e7b02c33ac2 done
+2026-10-08T21:17:42.386838209Z | #15 extracting sha256:7e6cefde2d0d94811f0c5723f77ab202d714587321bc031fdc416b11fcf47bca done
+2026-10-08T21:17:42.386839658Z | #15 extracting sha256:87e16d74f73fed41323e437349aeda84d63323bee7156dfc53725a65a69480f4 done
+2026-10-08T21:17:42.386841079Z | #15 extracting sha256:70978fdc7a74495705a4da0a796ad1de6a811225ddca0c63897ab86f275fea5f
+2026-10-08T21:17:43.30185498Z | #15 extracting sha256:70978fdc7a74495705a4da0a796ad1de6a811225ddca0c63897ab86f275fea5f 1.1s done
+2026-10-08T21:17:43.301866323Z | #15 DONE 6.3s
+2026-10-08T21:17:43.452501849Z | 
+2026-10-08T21:17:43.452519422Z | #16 [7/8] COPY . /opt/odoo
+2026-10-08T21:17:47.834508236Z | #16 DONE 4.5s
+2026-10-08T21:17:47.985354203Z | 
+2026-10-08T21:17:47.985383032Z | #17 [8/8] RUN chmod +x /opt/odoo/infra/entrypoint.sh     && chown -R odoo:odoo /opt/odoo /etc/odoo /var/lib/odoo /mnt/extra-addons
+2026-10-08T21:17:59.400521171Z | #17 DONE 11.6s
+2026-10-08T21:17:59.551606715Z | 
+2026-10-08T21:17:59.551626175Z | #18 exporting to image
+2026-10-08T21:17:59.551628912Z | #18 exporting layers
+2026-10-08T21:18:03.802693722Z | #18 exporting layers 4.4s done
+2026-10-08T21:18:03.908081249Z | #18 pushing layers
+2026-10-08T21:18:04.908647804Z | #18 ...
+2026-10-08T21:18:04.908659423Z | 
+2026-10-08T21:18:04.908661454Z | #19 exporting cache to registry
+2026-10-08T21:18:04.90866329Z | #19 sending cache export
+2026-10-08T21:18:07.304682424Z | #19 ...
+2026-10-08T21:18:07.304695611Z | 
+2026-10-08T21:18:07.304698024Z | #18 exporting to image
+2026-10-08T21:18:07.304699838Z | #18 pushing layers 3.4s done
