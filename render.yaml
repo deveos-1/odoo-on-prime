@@ -1,0 +1,37 @@
+databases:
+  - name: odoo-saas-db
+    plan: free
+    region: frankfurt
+    postgresMajorVersion: "16"
+
+services:
+  - type: web
+    name: odoo-saas
+    runtime: docker
+    plan: free
+    region: frankfurt
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /web/login
+    autoDeploy: true
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: odoo-saas-db
+          property: connectionString
+      - key: ODOO_MASTER_PASSWORD
+        generateValue: true
+      - key: ODOO_DBFILTER
+        value: "^%d$"
+      - key: ODOO_LIST_DB
+        value: "False"
+      - key: ODOO_WORKERS
+        value: "0"
+      - key: ODOO_MAX_CRON_THREADS
+        value: "1"
+      - key: ODOO_LIMIT_MEMORY_SOFT
+        value: "451000000"
+      - key: ODOO_LIMIT_MEMORY_HARD
+        value: "512000000"
+      - key: ODOO_LOG_LEVEL
+        value: "info"
